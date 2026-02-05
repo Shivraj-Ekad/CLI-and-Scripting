@@ -1,0 +1,3 @@
+Linux is powerful and flexible operating system.
+Linux supports multiple users and processes.
+System administration is important in Linux.

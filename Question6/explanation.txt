@@ -1,0 +1,25 @@
+cd ~/Question6
+
+→ Moves into Question6 working directory.
+
+nano input.txt
+
+→ Creates text file for analysis.
+
+CTRL + O → Enter → CTRL + X
+
+nano metrics.sh
+
+→ Creates text metrics script.
+
+CTRL + O → Enter → CTRL + X
+
+→ Adds logic to calculate word metrics.
+
+chmod +x metrics.sh
+
+→ Makes script executable.
+
+./metrics.sh
+
+→ Runs script to analyze text metrics.

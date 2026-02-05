@@ -1,0 +1,6 @@
+./metrics.sh
+
+→ Longest word: administration
+  Shortest word:
+  Average length: 5.57143
+  Unique words: 15
