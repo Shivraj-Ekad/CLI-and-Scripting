@@ -1,0 +1,21 @@
+ls
+
+→ Question2  Question3  module_lab
+
+./emailcleaner.sh
+
+→ Valid emails saved to valid.txt
+  Invalid emails saved to invalid.txt
+
+cat valid.txt
+
+→ abc@company.com
+  hello@site.com
+  john123@gmail.com
+  user99@yahoo.com
+
+cat invalid.txt
+
+→ wrong@email
+  test@abc
+  invalid@site

@@ -1,0 +1,41 @@
+mkdir Question4
+
+→ created new directory
+
+cd ~/Question4
+
+→ Moves into Question4 working directory.
+
+nano emails.txt
+
+→ Creates email input file.
+
+Sample Emails
+
+CTRL + O → Enter → CTRL + X
+
+→ saves files
+
+nano emailcleaner.sh
+
+→ Creates email cleaner script.
+
+edited file then CTRL + O → Enter → CTRL + X
+
+→ Adds logics to Filters valid and invalid emails and removes duplicates.
+
+chmod +x emailcleaner.sh
+
+→ Makes script executable
+
+./emailcleaner.sh
+
+→ Runs script to separate emails.
+
+cat valid.txt
+
+→ Displays valid email list.
+
+cat invalid.txt
+
+→ Displays invalid email list.

@@ -1,0 +1,3 @@
+wrong@email
+test@abc
+invalid@site

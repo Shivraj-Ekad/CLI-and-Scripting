@@ -1,0 +1,41 @@
+* ls
+
+* mkdir Question4
+
+* cd Question4
+
+* nano emails.txt
+
+john123@gmail.com
+abc@company.com
+wrong@email
+test@abc
+user99@yahoo.com
+john123@gmail.com
+hello@site.com
+invalid@site
+
+CTRL + O → Enter → CTRL + X
+
+* nano emailcleaner.sh
+
+* Script:-
+#!/bin/bash
+
+grep -E '^[a-zA-Z0-9]+@[a-zA-Z]+\.com$' emails.txt | sort | uniq > valid.txt
+grep -Ev '^[a-zA-Z0-9]+@[a-zA-Z]+\.com$' emails.txt > invalid.txt
+
+echo "Valid emails saved to valid.txt"
+echo "Invalid emails saved to invalid.txt"
+
+
+CTRL + O → Enter → CTRL + X
+
+
+* chmod +x emailcleaner.sh
+
+* ./emailcleaner.sh
+
+* cat valid.txt
+
+* cat invalid.txt
