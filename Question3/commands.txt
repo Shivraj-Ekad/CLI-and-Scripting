@@ -1,0 +1,58 @@
+*ls
+
+*mkdir Question3
+
+*ls
+
+*cd Question3
+
+*nano marks.txt
+
+101,John,45,67,23
+102,Alice,78,88,90
+103,Bob,30,40,50
+104,Riya,60,20,70
+
+CTRL + O → Enter → CTRL + X
+
+*nano validate_results.sh
+
+*Script:-
+#!/bin/bash
+
+fail_one=0
+pass_all=0
+
+while IFS=, read roll name m1 m2 m3
+do
+    fail=0
+
+    for mark in $m1 $m2 $m3
+    do
+        if [ $mark -lt 33 ]; then
+            fail=$((fail+1))
+        fi
+    done
+
+    if [ $fail -eq 1 ]; then
+        echo "Failed in exactly one subject: $name"
+        fail_one=$((fail_one+1))
+    fi
+
+    if [ $fail -eq 0 ]; then
+        echo "Passed all subjects: $name"
+        pass_all=$((pass_all+1))
+    fi
+
+done < marks.txt
+
+echo "Count failed in one subject: $fail_one"
+echo "Count passed all subjects: $pass_all"
+
+
+CTRL + O → Enter → CTRL + X
+
+*chmod +x validate_results.sh
+
+*./validate_results.sh
+

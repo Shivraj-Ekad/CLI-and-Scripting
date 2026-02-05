@@ -1,0 +1,23 @@
+cd Question3
+
+→ Moves into Question3 working directory.
+
+nano marks.txt
+
+→ Creates student marks data file.
+
+nano validate_results.sh
+
+→ Creates result validation script.
+
+edited file then CTRL + O → Enter → CTRL + X
+
+→ Adds logic to check pass/fail conditions.
+
+chmod +x validate_results.sh
+
+→ Makes script executable.
+
+./validate_results.sh
+
+→ Runs script to analyze student results.

@@ -1,0 +1,17 @@
+ls
+
+→ Question2  module_lab
+
+mkdir Question3
+ls
+
+→ Question2  Question3  module_lab
+
+./validate_results.sh
+
+→ Failed in exactly one subject: John
+  Passed all subjects: Alice
+  Failed in exactly one subject: Bob
+  Failed in exactly one subject: Riya
+  Count failed in one subject: 3
+  Count passed all subjects: 1
