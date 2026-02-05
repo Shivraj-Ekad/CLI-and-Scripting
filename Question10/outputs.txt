@@ -1,0 +1,3 @@
+./signal_demo
+SIGTERM received from child process
+SIGINT received. Parent exiting safely

@@ -1,0 +1,17 @@
+mkdir Question10
+creates directory
+
+cd ~/Question10
+Moves into Question10 working directory.
+
+nano signal_demo.c
+Creates signal handling C program file.
+
+CTRL + O → Enter → CTRL + X
+Adds signal handling logic for SIGTERM and SIGINT.
+
+gcc signal_demo.c -o signal_demo
+Compiles signal handling program.
+
+./signal_demo
+Runs program and waits for signals from child processes.
