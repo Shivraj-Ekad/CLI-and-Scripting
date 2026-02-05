@@ -1,0 +1,31 @@
+mkdir module_lab
+
+→ Creates module_lab Directory
+
+cd module_lab/
+
+→ Moves into the module_lab working directory.
+
+nano analyze.sh
+
+→ Creates and opens the script file for editing.
+
+edited file then CTRL + O → Enter → CTRL + X
+
+→ Adds logic to check file or directory and analyze it.
+
+chmod +x analyze.sh
+
+→ Gives execute permission to the script.
+
+echo "Hello Linux Lab" > test.txt
+
+→ Creates a sample file to test script.
+
+./analyze.sh test.txt
+
+→ Runs script and shows file statistics.
+
+./analyze.sh .
+
+→ Runs script to analyze current directory.

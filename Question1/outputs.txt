@@ -1,0 +1,10 @@
+analyze.sh
+
+test.txt file created in current directory
+
+File Analysis:
+ 1  3 16 test.txt
+
+Directory Analysis:
+Total files: 2
+.txt files: 1
