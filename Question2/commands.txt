@@ -1,0 +1,55 @@
+* nano logs.txt
+
+*2025-01-12 10:15:22 INFO System started
+2025-01-12 10:16:01 ERROR Disk not found
+2025-01-12 10:16:45 WARNING High memory usage
+2025-01-12 10:17:10 ERROR Network timeout
+
+*CTRL + O → Enter → CTRL + X
+
+*nano log_analyzer.sh
+
+* Script:-
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 logfile"
+    exit 1
+fi
+
+file=$1
+
+if [ ! -f "$file" ] || [ ! -r "$file" ]; then
+    echo "Error: File not found or not readable"
+    exit 1
+fi
+
+total=$(wc -l < "$file")
+info=$(grep -c "INFO" "$file")
+warn=$(grep -c "WARNING" "$file")
+error=$(grep -c "ERROR" "$file")
+
+recent_error=$(grep "ERROR" "$file" | tail -1)
+
+echo "Total entries: $total"
+echo "INFO: $info"
+echo "WARNING: $warn"
+echo "ERROR: $error"
+echo "Most recent ERROR: $recent_error"
+
+date_now=$(date +%F)
+report="logsummary_$date_now.txt"
+
+echo "Log Summary - $date_now" > $report
+echo "Total:$total INFO:$info WARNING:$warn ERROR:$error" >> $report
+echo "Recent ERROR:$recent_error" >> $report
+
+*CTRL + O → Enter → CTRL + X
+
+*chmod +x log_analyzer.sh
+
+*./log_analyzer.sh logs.txt
+
+*ls
+
+*cat logsummary_$(date +%F).txt

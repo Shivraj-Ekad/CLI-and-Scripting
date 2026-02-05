@@ -1,0 +1,29 @@
+nano logs.txt
+
+→ Creates log file for testing script.
+
+edited file then CTRL + O → Enter → CTRL + X
+
+nano log_analyzer.sh
+
+→ Creates log analyzer script file.
+
+edited file then CTRL + O → Enter → CTRL + X
+
+→ Adds log analysis logic and report generation.
+
+chmod +x log_analyzer.sh
+
+→ Makes script executable.
+
+./log_analyzer.sh logs.txt
+
+→ Runs script to analyze log file.
+
+ls
+
+→ Checks if report file is created.
+
+cat logsummary_$(date +%F).txt
+
+→ Displays generated report file content.
