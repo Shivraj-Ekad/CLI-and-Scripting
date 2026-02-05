@@ -1,0 +1,35 @@
+cd ~/Question7
+
+Moves into Question7 working directory.
+
+nano words.txt
+
+Creates text file for pattern testing.
+
+nano patterns.sh
+
+Creates pattern filtering script.
+
+CTRL + O → Enter → CTRL + X
+
+Filters words into vowel-only, consonant-only, and mixed categories.
+
+chmod +x patterns.sh
+
+Makes script executable.
+
+./patterns.sh words.txt
+
+Runs script to classify words by pattern.
+
+cat vowels.txt
+
+Shows words containing only vowels.
+
+cat consonants.txt
+
+Shows words containing only consonants.
+
+cat mixed.txt
+
+Shows words starting with consonant and containing vowels.

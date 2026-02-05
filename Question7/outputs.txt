@@ -1,0 +1,16 @@
+./patterns.sh words.txt
+Files created: vowels.txt, consonants.txt, mixed.txt
+
+cat vowels.txt
+aeiou
+
+cat consonants.txt
+bbb
+sky
+why
+rhythm
+bcdfg
+
+cat mixed.txt
+tree
+code

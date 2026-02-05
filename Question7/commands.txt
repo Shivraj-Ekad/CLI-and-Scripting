@@ -1,0 +1,49 @@
+* ls
+
+* mkdir Question7
+
+* ls
+
+* cd ~/Question7
+
+* nano words.txt
+
+aeiou
+bbb
+sky
+why
+apple
+tree
+rhythm
+bcdfg
+code
+
+CTRL + O → Enter → CTRL + X
+
+* nano patterns.sh
+
+* Script:-
+#!/bin/bash
+
+file=$1
+
+words=$(tr -c '[:alpha:]' '\n' < "$file" | tr 'A-Z' 'a-z')
+
+echo "$words" | grep -E '^[aeiou]+$' > vowels.txt
+echo "$words" | grep -E '^[bcdfghjklmnpqrstvwxyz]+$' > consonants.txt
+echo "$words" | grep -E '^[bcdfghjklmnpqrstvwxyz].*[aeiou].*' > mixed.txt
+
+echo "Files created: vowels.txt, consonants.txt, mixed.txt"
+
+
+CTRL + O → Enter → CTRL + X
+
+* chmod +x patterns.sh
+
+* ./patterns.sh words.txt
+
+* cat vowels.txt
+
+* cat consonants.txt
+
+* cat mixed.txt
