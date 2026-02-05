@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+int main() {
+    int i;
+
+    for(i = 0; i < 3; i++) {
+        pid_t pid = fork();
+
+        if(pid == 0) {
+            printf("Child Process PID: %d\n", getpid());
+            return 0;
+        }
+    }
+
+    for(i = 0; i < 3; i++) {
+        pid_t child = wait(NULL);
+        printf("Cleaned Child PID: %d\n", child);
+    }
+
+    return 0;
+}

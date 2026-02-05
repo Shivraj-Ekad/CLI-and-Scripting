@@ -1,0 +1,41 @@
+cd ~/Question9
+Moves into Question9 working directory.
+
+nano zombie.c
+Creates C program file for zombie process prevention.
+
+C:-
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+int main() {
+    int i;
+
+    for(i = 0; i < 3; i++) {
+        pid_t pid = fork();
+
+        if(pid == 0) {
+            printf("Child Process PID: %d\n", getpid());
+            return 0;
+        }
+    }
+
+    for(i = 0; i < 3; i++) {
+        pid_t child = wait(NULL);
+        printf("Cleaned Child PID: %d\n", child);
+    }
+
+    return 0;
+}
+
+
+CTRL + O → Enter → CTRL + X
+Adds logic to create child processes and clean them using wait().
+
+gcc zombie.c -o zombie
+Compiles C program into executable file.
+
+./zombie
+Runs program and prevents zombie processes using wait().

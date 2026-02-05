@@ -1,0 +1,7 @@
+./zombie
+Child Process PID: 5670
+Child Process PID: 5671
+Child Process PID: 5672
+Cleaned Child PID: 5670
+Cleaned Child PID: 5671
+Cleaned Child PID: 5672
