@@ -1,0 +1,8 @@
+./bg_move.sh testdir
+Background Move PID: 4226
+Background Move PID: 4227
+Background Move PID: 4228
+All background move operations completed.
+
+ls testdir/backup
+fileA.txt  fileB.txt  fileC.txt

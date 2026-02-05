@@ -1,0 +1,25 @@
+cd ~/Question8
+Moves into Question8 working directory.
+
+mkdir testdir
+Creates directory for testing file moves.
+
+echo "File A" > testdir/fileA.txt
+echo "File B" > testdir/fileB.txt
+echo "File C" > testdir/fileC.txt
+Creates sample files to test background move.
+
+nano bg_move.sh
+Creates background move script file.
+
+CTRL + O → Enter → CTRL + X
+Adds logic to move files to backup in background.
+
+chmod +x bg_move.sh
+Makes script executable.
+
+./bg_move.sh testdir
+Runs script to move files in background.
+
+ls testdir/backup
+Shows files moved into backup folder.

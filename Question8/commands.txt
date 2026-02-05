@@ -1,0 +1,42 @@
+ls
+
+mkdir Question8
+
+ls
+
+cd ~/Question8
+
+mkdir testdir
+
+echo "File A" > testdir/fileA.txt
+echo "File B" > testdir/fileB.txt
+echo "File C" > testdir/fileC.txt
+
+nano bg_move.sh
+
+Script:-
+#!/bin/bash
+
+dir=$1
+
+mkdir -p "$dir/backup"
+
+for file in "$dir"/*
+do
+    if [ -f "$file" ]; then
+        mv "$file" "$dir/backup/" &
+        echo "Background Move PID: $!"
+    fi
+done
+
+wait
+echo "All background move operations completed."
+
+CTRL + O → Enter → CTRL + X
+
+chmod +x bg_move.sh
+
+./bg_move.sh testdir
+
+ls testdir/backup
+
