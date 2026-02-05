@@ -1,0 +1,35 @@
+mkdir Question5
+
+→ created directory
+
+cd ~/Question5
+
+→ Moves into Question5 working directory.
+
+mkdir dirA dirB
+
+→ Creates two directories for comparison.
+
+echo "Hello A" > dirA/file1.txt
+echo "Hello B" > dirA/file2.txt
+echo "Hello A" > dirB/file1.txt
+echo "Different Content" > dirB/file3.txt
+
+→ Creates sample files to test script.
+
+nano sync.sh
+
+→ Creates directory comparison script.
+
+CTRL + O → Enter → CTRL + X
+
+→ Adds logic to compare directory files and content.
+
+chmod +x sync.sh
+
+→ Makes script executable.
+
+./sync.sh dirA dirB
+
+→ Runs script to compare directories.
+

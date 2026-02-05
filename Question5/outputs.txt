@@ -1,0 +1,8 @@
+./sync.sh dirA dirB
+
+→ Files only in dirA:
+  file2.txt
+  Files only in dirB:
+  file3.txt
+  Common files content check:
+  file1.txt -> Same
